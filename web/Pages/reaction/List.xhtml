@@ -48,11 +48,11 @@
                             <f:facet name="header">
                                 <h:outputText value="&nbsp;"/>
                             </f:facet>
-                            <h:commandLink action="#{reactionController.prepareView}" value="#{bundle.ListReactionViewLink}"/>
-                            <h:outputText value=" "/>
-                            <h:commandLink action="#{reactionController.prepareEdit}" value="#{bundle.ListReactionEditLink}"/>
-                            <h:outputText value=" "/>
-                            <h:commandLink action="#{reactionController.destroy}" value="#{bundle.ListReactionDestroyLink}"/>
+                            
+                            <h:commandButton  class="command" action="#{reactionController.prepareView}" value="#{bundle.ListReactionViewLink}" image="/resources/images/view.png" />
+                            <h:commandButton  class="command" action="#{reactionController.prepareEdit}" value="#{bundle.ListReactionEditLink}" image="/resources/images/edit.png" />
+                            <h:commandButton class="command" action="#{reactionController.destroy}" value="#{bundle.ListReactionDestroyLink}"  image="/resources/images/delete.png"/>
+                            
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup>

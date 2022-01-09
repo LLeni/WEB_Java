@@ -56,11 +56,11 @@
                             <f:facet name="header">
                                 <h:outputText value="&nbsp;"/>
                             </f:facet>
-                            <h:commandLink action="#{profileController.prepareView}" value="#{bundle.ListProfileViewLink}"/>
-                            <h:outputText value=" "/>
-                            <h:commandLink action="#{profileController.prepareEdit}" value="#{bundle.ListProfileEditLink}"/>
-                            <h:outputText value=" "/>
-                            <h:commandLink action="#{profileController.destroy}" value="#{bundle.ListProfileDestroyLink}"/>
+                            
+                           <h:commandButton  class="command" action="#{profileController.prepareView}" value="#{bundle.ListProfileViewLink}" image="/resources/images/view.png" />
+                           <h:commandButton  class="command" action="#{profileController.prepareEdit}" value="#{bundle.ListProfileEditLink}" image="/resources/images/edit.png" />
+                           <h:commandButton class="command" action="#{profileController.destroy}" value="#{bundle.ListProfileDestroyLink}"  image="/resources/images/delete.png"/>
+
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup>

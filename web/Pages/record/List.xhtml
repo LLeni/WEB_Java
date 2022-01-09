@@ -70,14 +70,22 @@
                             <f:facet name="header">
                                 <h:outputText value="&nbsp;"/>
                             </f:facet>
-                            <h:commandLink action="#{recordController.prepareView}" value="#{bundle.ListRecordViewLink}"/>
-                            <h:outputText value=" "/>
-                            <h:commandLink action="#{recordController.prepareEdit}" value="#{bundle.ListRecordEditLink}"/>
-                            <h:outputText value=" "/>
-                            <h:commandLink action="#{recordController.destroy}" value="#{bundle.ListRecordDestroyLink}"/>
+                            
+                            <h:commandButton  class="command" action="#{recordController.prepareView}" value="#{bundle.ListRecordViewLink}" image="/resources/images/view.png" />
+                            <h:commandButton  class="command" action="#{recordController.prepareEdit}" value="#{bundle.ListRecordEditLink}" image="/resources/images/edit.png" />
+                            <h:commandButton class="command" action="#{recordController.destroy}" value="#{bundle.ListRecordDestroyLink}"  image="/resources/images/delete.png"/>
+                            
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup> 
+                
+                
+                <h:commandLink action="#{recordController.prepareCreate}" value="#{bundle.ListRecordCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListRecordIndexLink}"/>
+                
+                
                 <br />
                 
                 <h2> Получение записей в течении одного месяца</h2>
@@ -147,22 +155,9 @@
                             </f:facet>
                             <h:outputText value="#{item.idProfile}"/>
                         </h:column>
-                        <h:column>
-                            <f:facet name="header">
-                                <h:outputText value="&nbsp;"/>
-                            </f:facet>
-                            <h:commandLink action="#{recordController.prepareView}" value="#{bundle.ListRecordViewLink}"/>
-                            <h:outputText value=" "/>
-                            <h:commandLink action="#{recordController.prepareEdit}" value="#{bundle.ListRecordEditLink}"/>
-                            <h:outputText value=" "/>
-                            <h:commandLink action="#{recordController.destroy}" value="#{bundle.ListRecordDestroyLink}"/>
-                        </h:column>
                     </h:dataTable>
                 </h:panelGroup>
-                <h:commandLink action="#{recordController.prepareCreate}" value="#{bundle.ListRecordCreateLink}"/>
-                <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.ListRecordIndexLink}"/>
+
             </h:form>
         </ui:define>
     </ui:composition>

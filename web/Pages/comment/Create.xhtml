@@ -15,6 +15,8 @@
             </h:panelGroup>
             <h:form>
                 <h:panelGrid columns="2">
+                     <h:outputLabel value="#{bundle.CreateCommentLabel_idComment}" for="textComment" />
+                    <h:inputText id="idComment" value="#{commentController.selected.idComment}" title="#{bundle.CreateCommentTitle_idComment}" required="true" requiredMessage="#{bundle.CreateCommentRequiredMessage_idComment}"/>
                     <h:outputLabel value="#{bundle.CreateCommentLabel_textComment}" for="textComment" />
                     <h:inputText id="textComment" value="#{commentController.selected.textComment}" title="#{bundle.CreateCommentTitle_textComment}" required="true" requiredMessage="#{bundle.CreateCommentRequiredMessage_textComment}"/>
                     <h:outputLabel value="#{bundle.CreateCommentLabel_idProfile}" for="idProfile" />

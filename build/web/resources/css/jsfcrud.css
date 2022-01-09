@@ -110,10 +110,16 @@ h2 {
     
 }
 
+
 .button a{
     text-decoration: none;
-    font: italic small-caps  4px;
+    font: italic small-caps 4px;
     color: white;
-    
+   
+}
 
+/* Иконки команд у каждой строки в таблице */
+.command{
+    width: 20px;
+    height: 20px;
 }
