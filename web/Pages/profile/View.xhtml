@@ -29,17 +29,20 @@
                     <h:outputText value="#{profileController.selected.aboutProfile}" title="#{bundle.ViewProfileTitle_aboutProfile}"/>
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{profileController.destroyAndView}" value="#{bundle.ViewProfileDestroyLink}"/>
+                <br />
+                <h:commandLink class="link" action="#{profileController.destroyAndView}" value="#{bundle.ViewProfileDestroyLink}"/>
                 <br />
                 <br />
-                <h:link outcome="Edit" value="#{bundle.ViewProfileEditLink}"/>
-                <br />
-                <h:commandLink action="#{profileController.prepareCreate}" value="#{bundle.ViewProfileCreateLink}" />
-                <br />
-                <h:commandLink action="#{profileController.prepareList}" value="#{bundle.ViewProfileShowAllLink}"/>
+                <h:link class="link" outcome="Edit" value="#{bundle.ViewProfileEditLink}"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.ViewProfileIndexLink}"/>
+                <h:commandLink class="link" action="#{profileController.prepareCreate}" value="#{bundle.ViewProfileCreateLink}" />
+                <br />
+                <br />
+                <h:commandLink class="link" action="#{profileController.prepareList}" value="#{bundle.ViewProfileShowAllLink}"/>
+                <br />
+                <br />
+                <h:link class="link" outcome="/index" value="#{bundle.ViewProfileIndexLink}"/>
 
             </h:form>
         </ui:define>

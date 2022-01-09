@@ -65,10 +65,11 @@
                     </h:dataTable>
                 </h:panelGroup>
                 <br />
-                <h:commandLink action="#{profileController.prepareCreate}" value="#{bundle.ListProfileCreateLink}"/>
+                <br />
+                <h:commandLink class="link" action="#{profileController.prepareCreate}" value="#{bundle.ListProfileCreateLink}"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.ListProfileIndexLink}"/>
+                <h:link class="link" outcome="/index" value="#{bundle.ListProfileIndexLink}"/>
             </h:form>
         </ui:define>
     </ui:composition>

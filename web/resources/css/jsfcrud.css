@@ -123,3 +123,14 @@ h2 {
     width: 20px;
     height: 20px;
 }
+
+
+.link:active,
+.link:hover,
+.link{
+    border: 2px solid #DB165C;
+    background-color: #00B1DB;
+    padding: 5px;
+    text-decoration: none;
+    color: white
+}

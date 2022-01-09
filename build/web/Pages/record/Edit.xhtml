@@ -36,15 +36,16 @@
                         <f:selectItems value="#{profileController.itemsAvailableSelectOne}"/>
                     </h:selectOneMenu>
                 </h:panelGrid>
-                <h:commandLink action="#{recordController.update}" value="#{bundle.EditRecordSaveLink}"/>
+                <h:commandLink class="link" action="#{recordController.update}" value="#{bundle.EditRecordSaveLink}"/>
                 <br />
                 <br />
-                <h:link outcome="View" value="#{bundle.EditRecordViewLink}"/>
-                <br />
-                <h:commandLink action="#{recordController.prepareList}" value="#{bundle.EditRecordShowAllLink}" immediate="true"/>
+                <h:link class="link" outcome="View" value="#{bundle.EditRecordViewLink}"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.EditRecordIndexLink}" />
+                <h:commandLink class="link" action="#{recordController.prepareList}" value="#{bundle.EditRecordShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link class="link" outcome="/index" value="#{bundle.EditRecordIndexLink}" />
             </h:form>
         </ui:define>
     </ui:composition>

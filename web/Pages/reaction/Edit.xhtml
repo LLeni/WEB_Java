@@ -28,15 +28,16 @@
                         <f:selectItems value="#{recordController.itemsAvailableSelectOne}"/>
                     </h:selectOneMenu>
                 </h:panelGrid>
-                <h:commandLink action="#{reactionController.update}" value="#{bundle.EditReactionSaveLink}"/>
+                <h:commandLink class="link" action="#{reactionController.update}" value="#{bundle.EditReactionSaveLink}"/>
                 <br />
                 <br />
-                <h:link outcome="View" value="#{bundle.EditReactionViewLink}"/>
-                <br />
-                <h:commandLink action="#{reactionController.prepareList}" value="#{bundle.EditReactionShowAllLink}" immediate="true"/>
+                <h:link class="link" outcome="View" value="#{bundle.EditReactionViewLink}"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.EditReactionIndexLink}" />
+                <h:commandLink class="link" action="#{reactionController.prepareList}" value="#{bundle.EditReactionShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link class="link" outcome="/index" value="#{bundle.EditReactionIndexLink}" />
             </h:form>
         </ui:define>
     </ui:composition>

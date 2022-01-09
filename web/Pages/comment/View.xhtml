@@ -25,17 +25,20 @@
                     <h:outputText value="#{commentController.selected.idRecord}" title="#{bundle.ViewCommentTitle_idRecord}"/>
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{commentController.destroyAndView}" value="#{bundle.ViewCommentDestroyLink}"/>
+                <br/>
+                <h:commandLink class="link" action="#{commentController.destroyAndView}" value="#{bundle.ViewCommentDestroyLink}"/>
                 <br />
                 <br />
-                <h:link outcome="Edit" value="#{bundle.ViewCommentEditLink}"/> 
+                <h:link class="link" outcome="Edit" value="#{bundle.ViewCommentEditLink}"/> 
                 <br />
-                <h:commandLink action="#{commentController.prepareCreate}" value="#{bundle.ViewCommentCreateLink}" />
+                <br/>
+                <h:commandLink class="link" action="#{commentController.prepareCreate}" value="#{bundle.ViewCommentCreateLink}" />
                 <br />
-                <h:commandLink action="#{commentController.prepareList}" value="#{bundle.ViewCommentShowAllLink}"/>
+                <br />
+                <h:commandLink class="link" action="#{commentController.prepareList}" value="#{bundle.ViewCommentShowAllLink}"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.ViewCommentIndexLink}"/>
+                <h:link class="link" outcome="/index" value="#{bundle.ViewCommentIndexLink}"/>
 
             </h:form>
         </ui:define>

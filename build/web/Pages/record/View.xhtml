@@ -35,17 +35,20 @@
                     <h:outputText value="#{recordController.selected.idProfile}" title="#{bundle.ViewRecordTitle_idProfile}"/>
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{recordController.destroyAndView}" value="#{bundle.ViewRecordDestroyLink}"/>
+                <br />
+                <h:commandLink class="link" action="#{recordController.destroyAndView}" value="#{bundle.ViewRecordDestroyLink}"/>
                 <br />
                 <br />
-                <h:link outcome="Edit" value="#{bundle.ViewRecordEditLink}"/>
-                <br />
-                <h:commandLink action="#{recordController.prepareCreate}" value="#{bundle.ViewRecordCreateLink}" />
-                <br />
-                <h:commandLink action="#{recordController.prepareList}" value="#{bundle.ViewRecordShowAllLink}"/>
+                <h:link class="link" outcome="Edit" value="#{bundle.ViewRecordEditLink}"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.ViewRecordIndexLink}"/>
+                <h:commandLink class="link" action="#{recordController.prepareCreate}" value="#{bundle.ViewRecordCreateLink}" />
+                <br />
+                <br />
+                <h:commandLink class="link" action="#{recordController.prepareList}" value="#{bundle.ViewRecordShowAllLink}"/>
+                <br />
+                <br />
+                <h:link class="link" outcome="/index" value="#{bundle.ViewRecordIndexLink}"/>
 
             </h:form>
         </ui:define>

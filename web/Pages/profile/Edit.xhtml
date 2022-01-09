@@ -28,15 +28,16 @@
                     <h:outputLabel value="#{bundle.EditProfileLabel_aboutProfile}" for="aboutProfile" />
                     <h:inputText id="aboutProfile" value="#{profileController.selected.aboutProfile}" title="#{bundle.EditProfileTitle_aboutProfile}" />
                 </h:panelGrid>
-                <h:commandLink action="#{profileController.update}" value="#{bundle.EditProfileSaveLink}"/>
+                <h:commandLink class="link" action="#{profileController.update}" value="#{bundle.EditProfileSaveLink}"/>
                 <br />
                 <br />
-                <h:link outcome="View" value="#{bundle.EditProfileViewLink}"/>
+                <h:link class="link"  outcome="View" value="#{bundle.EditProfileViewLink}"/>
+                <br />
                 <br />
                 <h:commandLink action="#{profileController.prepareList}" value="#{bundle.EditProfileShowAllLink}" immediate="true"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.EditProfileIndexLink}" />
+                <h:link class="link" outcome="/index" value="#{bundle.EditProfileIndexLink}" />
             </h:form>
         </ui:define>
     </ui:composition>

@@ -29,10 +29,11 @@
                     </h:selectOneMenu>
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{commentController.create}" value="#{bundle.CreateCommentSaveLink}" />
+                <br />
+                <h:commandLink class="link" action="#{commentController.create}" value="#{bundle.CreateCommentSaveLink}" />
                 <br />
                 <br />
-                <h:commandLink action="#{commentController.prepareList}" value="#{bundle.CreateCommentShowAllLink}" immediate="true"/>
+                <h:commandLink class="link" action="#{commentController.prepareList}" value="#{bundle.CreateCommentShowAllLink}" immediate="true"/>
                 <br />
                 <br />
                 <h:link outcome="/index" value="#{bundle.CreateCommentIndexLink}"/>

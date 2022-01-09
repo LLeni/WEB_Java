@@ -52,15 +52,16 @@
                             
                            <h:commandButton  class="command" action="#{commentController.prepareView}" value="#{bundle.ListCommentViewLink}" image="/resources/images/view.png" />
                            <h:commandButton  class="command" action="#{commentController.prepareEdit}" value="#{bundle.ListCommentEditLink}" image="/resources/images/edit.png" />
-                           <h:commandButton class="command" action="#{commentController.destroy}" value="#{bundle.ListCommentDestroyLink}"  image="/resources/images/delete.png"/>
+                           <h:commandButton  class="command" action="#{commentController.destroy}" value="#{bundle.ListCommentDestroyLink}"  image="/resources/images/delete.png"/>
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup>
                 <br />
-                <h:commandLink action="#{commentController.prepareCreate}" value="#{bundle.ListCommentCreateLink}"/>
+                <br />
+                <h:commandLink class="link" action="#{commentController.prepareCreate}" value="#{bundle.ListCommentCreateLink}"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.ListCommentIndexLink}"/>
+                <h:link class="link" outcome="/index" value="#{bundle.ListCommentIndexLink}"/>
             </h:form>
         </ui:define>
     </ui:composition>

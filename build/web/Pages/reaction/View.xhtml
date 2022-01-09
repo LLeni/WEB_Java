@@ -25,17 +25,20 @@
                     <h:outputText value="#{reactionController.selected.idRecord}" title="#{bundle.ViewReactionTitle_idRecord}"/>
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{reactionController.destroyAndView}" value="#{bundle.ViewReactionDestroyLink}"/>
+                <br />
+                <h:commandLink class="link" action="#{reactionController.destroyAndView}" value="#{bundle.ViewReactionDestroyLink}"/>
                 <br />
                 <br />
-                <h:link outcome="Edit" value="#{bundle.ViewReactionEditLink}"/>
-                <br />
-                <h:commandLink action="#{reactionController.prepareCreate}" value="#{bundle.ViewReactionCreateLink}" />
-                <br />
-                <h:commandLink action="#{reactionController.prepareList}" value="#{bundle.ViewReactionShowAllLink}"/>
+                <h:link class="link" outcome="Edit" value="#{bundle.ViewReactionEditLink}"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.ViewReactionIndexLink}"/>
+                <h:commandLink class="link" action="#{reactionController.prepareCreate}" value="#{bundle.ViewReactionCreateLink}" />
+                <br />
+                <br />
+                <h:commandLink class="link" action="#{reactionController.prepareList}" value="#{bundle.ViewReactionShowAllLink}"/>
+                <br />
+                <br />
+                <h:link class="link" outcome="/index" value="#{bundle.ViewReactionIndexLink}"/>
 
             </h:form>
         </ui:define>

@@ -29,13 +29,14 @@
                     <h:inputText id="aboutProfile" value="#{profileController.selected.aboutProfile}" title="#{bundle.CreateProfileTitle_aboutProfile}" />
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{profileController.create}" value="#{bundle.CreateProfileSaveLink}" />
+                <br />
+                <h:commandLink class="link" action="#{profileController.create}" value="#{bundle.CreateProfileSaveLink}" />
                 <br />
                 <br />
-                <h:commandLink action="#{profileController.prepareList}" value="#{bundle.CreateProfileShowAllLink}" immediate="true"/>
+                <h:commandLink class="link" action="#{profileController.prepareList}" value="#{bundle.CreateProfileShowAllLink}" immediate="true"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.CreateProfileIndexLink}"/>
+                <h:link class="link" outcome="/index" value="#{bundle.CreateProfileIndexLink}"/>
             </h:form>
         </ui:define>
     </ui:composition>

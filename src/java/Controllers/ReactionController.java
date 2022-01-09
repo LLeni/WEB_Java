@@ -95,6 +95,13 @@ public class ReactionController implements Serializable {
         selectedItemIndex = pagination.getPageFirstItem() + getItems().getRowIndex();
         return "Edit";
     }
+    
+    
+    public String prepareEdit2() {
+        current = (Reaction) getItems().getRowData();
+        selectedItemIndex = pagination.getPageFirstItem() + getItems().getRowIndex();
+        return "Edit";
+    }
 
     public String update() {
         try {

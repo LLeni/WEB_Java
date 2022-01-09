@@ -57,10 +57,11 @@
                     </h:dataTable>
                 </h:panelGroup>
                 <br />
-                <h:commandLink action="#{reactionController.prepareCreate}" value="#{bundle.ListReactionCreateLink}"/>
+                <br />
+                <h:commandLink class="link" action="#{reactionController.prepareCreate}" value="#{bundle.ListReactionCreateLink}"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.ListReactionIndexLink}"/>
+                <h:link class="link" outcome="/index" value="#{bundle.ListReactionIndexLink}"/>
             </h:form>
         </ui:define>
     </ui:composition>

@@ -29,13 +29,14 @@
                     </h:selectOneMenu>
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{reactionController.create}" value="#{bundle.CreateReactionSaveLink}" />
+                <br />
+                <h:commandLink class="link" action="#{reactionController.create}" value="#{bundle.CreateReactionSaveLink}" />
                 <br />
                 <br />
-                <h:commandLink action="#{reactionController.prepareList}" value="#{bundle.CreateReactionShowAllLink}" immediate="true"/>
+                <h:commandLink class="link" action="#{reactionController.prepareList}" value="#{bundle.CreateReactionShowAllLink}" immediate="true"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.CreateReactionIndexLink}"/>
+                <h:link class="link" outcome="/index" value="#{bundle.CreateReactionIndexLink}"/>
             </h:form>
         </ui:define>
     </ui:composition>

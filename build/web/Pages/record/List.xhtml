@@ -79,24 +79,26 @@
                     </h:dataTable>
                 </h:panelGroup> 
                 
-                
-                <h:commandLink action="#{recordController.prepareCreate}" value="#{bundle.ListRecordCreateLink}"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.ListRecordIndexLink}"/>
+                <h:commandLink class="link" action="#{recordController.prepareCreate}" value="#{bundle.ListRecordCreateLink}"/>
+                <br />
+                <br />
+                <h:link class="link" outcome="/index" value="#{bundle.ListRecordIndexLink}"/>
                 
-                
+                <br />
                 <br />
                 
                 <h2> Получение записей в течении одного месяца</h2>
                 <h:form>
                 <h:panelGrid columns="2">
                     
-                    <h:commandButton value="Показать" type="submit" action="#{recordController.prepareFind}" />
+
                     <h:outputLabel value="#{bundle.CreateRecordLabel_idProfile}" for="idProfile" />
                     <h:selectOneMenu id="idProfile" value="#{recordController.selected.idProfile}" title="#{bundle.CreateRecordTitle_idProfile}" >
                         <f:selectItems value="#{profileController.itemsAvailableSelectOne}"/>
                     </h:selectOneMenu>
+                    <h:commandButton value="Показать" type="submit" action="#{recordController.prepareFindByMonth}" />
                 </h:panelGrid>
                 </h:form>
 
