@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditProfileTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditProfileLabel_idProfile}" for="idProfile" />
+                    <h:inputText id="idProfile" value="#{profileController.selected.idProfile}" title="#{bundle.EditProfileTitle_idProfile}" required="true" requiredMessage="#{bundle.EditProfileRequiredMessage_idProfile}"/>
+                    <h:outputLabel value="#{bundle.EditProfileLabel_loginProfile}" for="loginProfile" />
+                    <h:inputText id="loginProfile" value="#{profileController.selected.loginProfile}" title="#{bundle.EditProfileTitle_loginProfile}" required="true" requiredMessage="#{bundle.EditProfileRequiredMessage_loginProfile}"/>
+                    <h:outputLabel value="#{bundle.EditProfileLabel_encryptPasswordProfile}" for="encryptPasswordProfile" />
+                    <h:inputText id="encryptPasswordProfile" value="#{profileController.selected.encryptPasswordProfile}" title="#{bundle.EditProfileTitle_encryptPasswordProfile}" required="true" requiredMessage="#{bundle.EditProfileRequiredMessage_encryptPasswordProfile}"/>
+                    <h:outputLabel value="#{bundle.EditProfileLabel_dateRegistrationProfile}" for="dateRegistrationProfile" />
+                    <h:inputText id="dateRegistrationProfile" value="#{profileController.selected.dateRegistrationProfile}" title="#{bundle.EditProfileTitle_dateRegistrationProfile}" required="true" requiredMessage="#{bundle.EditProfileRequiredMessage_dateRegistrationProfile}">
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditProfileLabel_aboutProfile}" for="aboutProfile" />
+                    <h:inputText id="aboutProfile" value="#{profileController.selected.aboutProfile}" title="#{bundle.EditProfileTitle_aboutProfile}" />
+                </h:panelGrid>
+                <h:commandLink action="#{profileController.update}" value="#{bundle.EditProfileSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditProfileViewLink}"/>
+                <br />
+                <h:commandLink action="#{profileController.prepareList}" value="#{bundle.EditProfileShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditProfileIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

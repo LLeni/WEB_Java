@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditRecordTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditRecordLabel_idRecord}" for="idRecord" />
+                    <h:inputText id="idRecord" value="#{recordController.selected.idRecord}" title="#{bundle.EditRecordTitle_idRecord}" required="true" requiredMessage="#{bundle.EditRecordRequiredMessage_idRecord}"/>
+                    <h:outputLabel value="#{bundle.EditRecordLabel_dateRecord}" for="dateRecord" />
+                    <h:inputText id="dateRecord" value="#{recordController.selected.dateRecord}" title="#{bundle.EditRecordTitle_dateRecord}" required="true" requiredMessage="#{bundle.EditRecordRequiredMessage_dateRecord}">
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditRecordLabel_linkDemoRecord}" for="linkDemoRecord" />
+                    <h:inputText id="linkDemoRecord" value="#{recordController.selected.linkDemoRecord}" title="#{bundle.EditRecordTitle_linkDemoRecord}" required="true" requiredMessage="#{bundle.EditRecordRequiredMessage_linkDemoRecord}"/>
+                    <h:outputLabel value="#{bundle.EditRecordLabel_countViewsRecord}" for="countViewsRecord" />
+                    <h:inputText id="countViewsRecord" value="#{recordController.selected.countViewsRecord}" title="#{bundle.EditRecordTitle_countViewsRecord}" required="true" requiredMessage="#{bundle.EditRecordRequiredMessage_countViewsRecord}"/>
+                    <h:outputLabel value="#{bundle.EditRecordLabel_additionalInformationRecord}" for="additionalInformationRecord" />
+                    <h:inputText id="additionalInformationRecord" value="#{recordController.selected.additionalInformationRecord}" title="#{bundle.EditRecordTitle_additionalInformationRecord}" />
+                    <h:outputLabel value="#{bundle.EditRecordLabel_timeRunRecord}" for="timeRunRecord" />
+                    <h:inputText id="timeRunRecord" value="#{recordController.selected.timeRunRecord}" title="#{bundle.EditRecordTitle_timeRunRecord}" required="true" requiredMessage="#{bundle.EditRecordRequiredMessage_timeRunRecord}">
+                        <f:convertDateTime pattern="HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditRecordLabel_idProfile}" for="idProfile" />
+                    <h:selectOneMenu id="idProfile" value="#{recordController.selected.idProfile}" title="#{bundle.EditRecordTitle_idProfile}" >
+                        <f:selectItems value="#{profileController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <h:commandLink action="#{recordController.update}" value="#{bundle.EditRecordSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditRecordViewLink}"/>
+                <br />
+                <h:commandLink action="#{recordController.prepareList}" value="#{bundle.EditRecordShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditRecordIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

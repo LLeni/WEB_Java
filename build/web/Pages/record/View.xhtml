@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewRecordTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewRecordLabel_idRecord}"/>
+                    <h:outputText value="#{recordController.selected.idRecord}" title="#{bundle.ViewRecordTitle_idRecord}"/>
+                    <h:outputText value="#{bundle.ViewRecordLabel_dateRecord}"/>
+                    <h:outputText value="#{recordController.selected.dateRecord}" title="#{bundle.ViewRecordTitle_dateRecord}">
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewRecordLabel_linkDemoRecord}"/>
+                    <h:outputText value="#{recordController.selected.linkDemoRecord}" title="#{bundle.ViewRecordTitle_linkDemoRecord}"/>
+                    <h:outputText value="#{bundle.ViewRecordLabel_countViewsRecord}"/>
+                    <h:outputText value="#{recordController.selected.countViewsRecord}" title="#{bundle.ViewRecordTitle_countViewsRecord}"/>
+                    <h:outputText value="#{bundle.ViewRecordLabel_additionalInformationRecord}"/>
+                    <h:outputText value="#{recordController.selected.additionalInformationRecord}" title="#{bundle.ViewRecordTitle_additionalInformationRecord}"/>
+                    <h:outputText value="#{bundle.ViewRecordLabel_timeRunRecord}"/>
+                    <h:outputText value="#{recordController.selected.timeRunRecord}" title="#{bundle.ViewRecordTitle_timeRunRecord}">
+                        <f:convertDateTime pattern="HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewRecordLabel_idProfile}"/>
+                    <h:outputText value="#{recordController.selected.idProfile}" title="#{bundle.ViewRecordTitle_idProfile}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{recordController.destroyAndView}" value="#{bundle.ViewRecordDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewRecordEditLink}"/>
+                <br />
+                <h:commandLink action="#{recordController.prepareCreate}" value="#{bundle.ViewRecordCreateLink}" />
+                <br />
+                <h:commandLink action="#{recordController.prepareList}" value="#{bundle.ViewRecordShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewRecordIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
