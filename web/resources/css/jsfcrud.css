@@ -103,11 +103,20 @@ h2 {
     height:100px;
     margin-right: 50px;
     margin-bottom: 10px;
-    background-color: #00B1DB;
+
     
     display:  table-cell;
    vertical-align:  middle;
     
+   border: 1px solid white;
+}
+
+.buttonOdd{
+    background-color: #00B1DB;
+}
+
+.buttonEven{
+    background-color: #DB165C;
 }
 
 

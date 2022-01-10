@@ -6,6 +6,7 @@ import Controllers.util.PaginationHelper;
 import Facades.RecordFacade;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.ResourceBundle;
 import javax.ejb.EJB;
 import javax.inject.Named;
@@ -28,9 +29,30 @@ public class RecordController implements Serializable {
     private Facades.RecordFacade ejbFacade;
     private PaginationHelper pagination;
     private int selectedItemIndex;
+    
+    
+    private List<Record> recordsByMonthList = null;
+    private int month;
 
     public RecordController() {
     }
+    
+    public int getMonth(){
+        return month;
+    }
+    
+    public void setMonth(int month){
+        this.month = month;
+    }
+    
+    public void setRecordsByMonthList(List<Record> recordsByMonthList){
+        this.recordsByMonthList = recordsByMonthList;
+    }
+    
+    public List<Record> getRecordsByMonthList(){
+        return recordsByMonthList;
+    }
+   
 
     public Record getSelected() {
         if (current == null) {
@@ -61,10 +83,20 @@ public class RecordController implements Serializable {
         }
         return pagination;
     }
+    
 
     public String prepareList() {
         recreateModel();
         return "List";
+    }
+    
+    public String prepareListOnMonth() {
+        System.out.println("Мы здесь " + month);
+        recreateModel();
+        recordsByMonthList = ejbFacade.findByMonth(month);
+        if(recordsByMonthList.isEmpty())
+            recordsByMonthList = null;
+        return "ListOnMonth";
     }
 
     public String prepareView() {

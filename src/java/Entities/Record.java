@@ -42,6 +42,7 @@ import javax.xml.bind.annotation.XmlTransient;
     , @NamedQuery(name = "Record.findByCountViewsRecord", query = "SELECT r FROM Record r WHERE r.countViewsRecord = :countViewsRecord")
     , @NamedQuery(name = "Record.findByAdditionalInformationRecord", query = "SELECT r FROM Record r WHERE r.additionalInformationRecord = :additionalInformationRecord")
     , @NamedQuery(name = "Record.findByTimeRunRecord", query = "SELECT r FROM Record r WHERE r.timeRunRecord = :timeRunRecord")
+    , @NamedQuery(name = "Record.findByMonth", query = "SELECT r FROM Record r WHERE extract(month from r.dateRecord) = :month")
     })
 public class Record implements Serializable {
 

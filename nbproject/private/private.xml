@@ -3,12 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/LLeni/Documents/NetBeansProjects/JoyRoomsServer2/web/Pages/reaction/Edit.xhtml</file>
             <file>file:/C:/Users/LLeni/Documents/NetBeansProjects/JoyRoomsServer2/src/java/Facades/AbstractFacade.java</file>
             <file>file:/C:/Users/LLeni/Documents/NetBeansProjects/JoyRoomsServer2/web/Pages/profile/View.xhtml</file>
             <file>file:/C:/Users/LLeni/Documents/NetBeansProjects/JoyRoomsServer2/web/index.xhtml</file>
             <file>file:/C:/Users/LLeni/Documents/NetBeansProjects/JoyRoomsServer2/src/java/Controllers/ReactionController.java</file>
             <file>file:/C:/Users/LLeni/Documents/NetBeansProjects/JoyRoomsServer2/web/Pages/record/List.xhtml</file>
+            <file>file:/C:/Users/LLeni/Documents/NetBeansProjects/JoyRoomsServer2/src/java/Controllers/ProfileController.java</file>
+            <file>file:/C:/Users/LLeni/Documents/NetBeansProjects/JoyRoomsServer2/web/Pages/reaction/Create.xhtml</file>
+            <file>file:/C:/Users/LLeni/Documents/NetBeansProjects/JoyRoomsServer2/web/Pages/profile/Edit.xhtml</file>
             <file>file:/C:/Users/LLeni/Documents/NetBeansProjects/JoyRoomsServer2/src/java/Controllers/RecordController.java</file>
+            <file>file:/C:/Users/LLeni/Documents/NetBeansProjects/JoyRoomsServer2/src/java/Controllers/util/PaginationHelper.java</file>
             <file>file:/C:/Users/LLeni/Documents/NetBeansProjects/JoyRoomsServer2/web/Pages/comment/Create.xhtml</file>
             <file>file:/C:/Users/LLeni/Documents/NetBeansProjects/JoyRoomsServer2/src/java/Entities/Reaction.java</file>
             <file>file:/C:/Users/LLeni/Documents/NetBeansProjects/JoyRoomsServer2/src/java/Facades/CommentFacade.java</file>
@@ -18,18 +23,24 @@
             <file>file:/C:/Users/LLeni/Documents/NetBeansProjects/JoyRoomsServer2/web/template.xhtml</file>
             <file>file:/C:/Users/LLeni/Documents/NetBeansProjects/JoyRoomsServer2/web/Pages/record/Edit.xhtml</file>
             <file>file:/C:/Users/LLeni/Documents/NetBeansProjects/JoyRoomsServer2/web/resources/css/jsfcrud.css</file>
+            <file>file:/C:/Users/LLeni/Documents/NetBeansProjects/JoyRoomsServer2/web/Pages/profile/Create.xhtml</file>
             <file>file:/C:/Users/LLeni/Documents/NetBeansProjects/JoyRoomsServer2/web/Pages/comment/Edit.xhtml</file>
             <file>file:/C:/Users/LLeni/Documents/NetBeansProjects/JoyRoomsServer2/src/java/Entities/Comment.java</file>
+            <file>file:/C:/Users/LLeni/Documents/NetBeansProjects/JoyRoomsServer2/.git/config</file>
             <file>file:/C:/Users/LLeni/Documents/NetBeansProjects/JoyRoomsServer2/src/java/Facades/ReactionFacade.java</file>
             <file>file:/C:/Users/LLeni/Documents/NetBeansProjects/JoyRoomsServer2/src/java/Entities/Record.java</file>
             <file>file:/C:/Users/LLeni/Documents/NetBeansProjects/JoyRoomsServer2/src/java/Entities/Profile.java</file>
+            <file>file:/C:/Users/LLeni/Documents/NetBeansProjects/JoyRoomsServer2/web/Pages/reaction/List.xhtml</file>
             <file>file:/C:/Users/LLeni/Documents/NetBeansProjects/JoyRoomsServer2/src/java/Facades/RecordFacade.java</file>
-            <file>file:/C:/Users/LLeni/Documents/NetBeansProjects/JoyRoomsServer2/web/resources/images/view.png</file>
+            <file>file:/C:/Users/LLeni/Documents/NetBeansProjects/JoyRoomsServer2/src/java/Bundle.properties</file>
+            <file>file:/C:/Users/LLeni/Documents/NetBeansProjects/JoyRoomsServer2/web/Pages/record/ListOnMonth.xhtml</file>
             <file>file:/C:/Users/LLeni/Documents/NetBeansProjects/JoyRoomsServer2/web/Pages/profile/List.xhtml</file>
             <file>file:/C:/Users/LLeni/Documents/NetBeansProjects/JoyRoomsServer2/web/Pages/record/Create.xhtml</file>
             <file>file:/C:/Users/LLeni/Documents/NetBeansProjects/JoyRoomsServer2/web/Pages/comment/View.xhtml</file>
             <file>file:/C:/Users/LLeni/Documents/NetBeansProjects/JoyRoomsServer2/src/java/Controllers/CommentController.java</file>
             <file>file:/C:/Users/LLeni/Documents/NetBeansProjects/JoyRoomsServer2/web/Pages/comment/List.xhtml</file>
+            <file>file:/C:/Users/LLeni/Documents/NetBeansProjects/JoyRoomsServer2/src/java/Controllers/util/JsfUtil.java</file>
+            <file>file:/C:/Users/LLeni/Documents/NetBeansProjects/JoyRoomsServer2/web/Pages/reaction/View.xhtml</file>
         </group>
     </open-files>
 </project-private>

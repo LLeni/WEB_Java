@@ -7,19 +7,21 @@
 
     <ui:composition template="/template.xhtml">
         <ui:define name="title">
-            <h:outputText value="#{bundle.ListRecordTitle}"></h:outputText>
+            <h:outputText value="#{bundle.ListOnMonthRecordTitle}"></h:outputText>
         </ui:define>
         <ui:define name="body">
             <h:form styleClass="jsfcrud_list_form">
-                <h:panelGroup id="messagePanel" layout="block">
+                 <h:outputText escape="false" value="Записи в #{recordController.month} месяце" rendered="#{recordController.recordsByMonthList != null}"/>
+
+                <h:panelGroup id="messagePanel2" layout="block">
                     <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
                 </h:panelGroup>
-                <h:outputText escape="false" value="#{bundle.ListRecordEmpty}" rendered="#{recordController.items.rowCount == 0}"/>
-                <h:panelGroup rendered="#{recordController.items.rowCount > 0}">
+                  <h:outputText escape="false" value="Нет рекордов в #{recordController.month} месяце" rendered="#{recordController.recordsByMonthList == null}"/>
+                <h:panelGroup rendered="#{recordController.recordsByMonthList != null}">
                     <h:outputText value="#{recordController.pagination.pageFirstItem + 1}..#{recordController.pagination.pageLastItem + 1}/#{recordController.pagination.itemsCount}"/>&nbsp;
                     <h:commandLink action="#{recordController.previous}" value="#{bundle.Previous} #{recordController.pagination.pageSize}" rendered="#{recordController.pagination.hasPreviousPage}"/>&nbsp;
                     <h:commandLink action="#{recordController.next}" value="#{bundle.Next} #{recordController.pagination.pageSize}" rendered="#{recordController.pagination.hasNextPage}"/>&nbsp;
-                    <h:dataTable value="#{recordController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                    <h:dataTable value="#{recordController.recordsByMonthList}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
                         <h:column>
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListRecordTitle_idRecord}"/>
@@ -66,7 +68,8 @@
                             </f:facet>
                             <h:outputText value="#{item.idProfile}"/>
                         </h:column>
-                        <h:column>
+                        
+                         <h:column>
                             <f:facet name="header">
                                 <h:outputText value="Команды"/>
                             </f:facet>
@@ -77,39 +80,19 @@
                             
                         </h:column>
                     </h:dataTable>
-                </h:panelGroup> 
+                </h:panelGroup>
                 
                 <br />
                 <br />
                 <h:commandLink class="link" action="#{recordController.prepareCreate}" value="#{bundle.ListRecordCreateLink}"/>
+
                 <br />
+                <br />
+                <h:commandLink class="link" action="#{recordController.prepareList}" value="#{bundle.EditRecordShowAllLink}" immediate="true"/>
+                                <br />
                 <br />
                 <h:link class="link" outcome="/index" value="#{bundle.ListRecordIndexLink}"/>
-                
-                <br />
-                <br />
-                
-                <h2> Получение записей в течение одного месяца</h2>
 
-                    <h:panelGrid columns="3">
-                    <h:outputLabel value="Месяц:" />
-                        <h:selectOneMenu value = "#{recordController.month}"> 
-                            <f:selectItem itemValue = "1" itemLabel = "Январь" /> 
-                            <f:selectItem itemValue = "2" itemLabel = "Февраль" /> 
-                            <f:selectItem itemValue = "3" itemLabel = "Март" /> 
-                            <f:selectItem itemValue = "4" itemLabel = "Апрель" /> 
-                            <f:selectItem itemValue = "5" itemLabel = "Май" /> 
-                            <f:selectItem itemValue = "6" itemLabel = "Июнь" /> 
-                            <f:selectItem itemValue = "7" itemLabel = "Июль" /> 
-                            <f:selectItem itemValue = "8" itemLabel = "Август" /> 
-                            <f:selectItem itemValue = "9" itemLabel = "Сентябрь" /> 
-                            <f:selectItem itemValue = "10" itemLabel = "Октябрь" /> 
-                            <f:selectItem itemValue = "11" itemLabel = "Ноябрь" /> 
-                            <f:selectItem itemValue = "12" itemLabel = "Декабрь" /> 
-                        </h:selectOneMenu> 
-
-                        <h:commandLink class="link"  value="Показать" action="#{recordController.prepareListOnMonth}" />
-                    </h:panelGrid>
             </h:form>
         </ui:define>
     </ui:composition>
