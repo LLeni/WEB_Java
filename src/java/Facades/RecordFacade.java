@@ -26,21 +26,37 @@ public class RecordFacade extends AbstractFacade<Record> {
     protected EntityManager getEntityManager() {
         return em;
     }
+    
+
+    
+//    public List<Record> findByMonth() {
+//        
+//        javax.persistence.criteria.CriteriaQuery cq = getEntityManager().getCriteriaBuilder().createQuery();
+//        cq.select(cq.from(Record.class));
+//        javax.persistence.Query q = getEntityManager().createQuery(cq);
+//        q.setMaxResults(range[1] - range[0] + 1);
+//        q.setFirstResult(range[0]);
+//        
+//        return q.getResultList();
+//    }
 
     public RecordFacade() {
         super(Record.class);
     }
     
-    public List<Record> find(String approximate_date_record){
-        Query query = em.createNativeQuery("SELECT profile.login_profile, record.link_demo_record\n" +
-                                "FROM record INNER JOIN profile ON record.id_profile = profile.id_profile\n" +
-                                "WHERE date_record BETWEEN TO_DATE('01.' || EXTRACT(MONTH FROM ?) || '.' ||  EXTRACT(YEAR FROM ?), 'DD.MM.YYYY') AND TO_DATE('30.' || EXTRACT(MONTH FROM ?) || '.' ||  EXTRACT(YEAR FROM ?), 'DD.MM.YYYY');", Record.class);
-        query.setParameter(1, approximate_date_record);
-        query.setParameter(2, approximate_date_record);
-        query.setParameter(3, approximate_date_record);
-        query.setParameter(4, approximate_date_record);
-        List<Record> result = query.getResultList();
-        return result;
+        public List<Record> findByMonth(int month) {
+        return em.createNamedQuery("Record.findByName").setParameter("month", month).getResultList();
     }
+//    public List<Record> find(String approximate_date_record){
+//        Query query = em.createNativeQuery("SELECT profile.login_profile, record.link_demo_record\n" +
+//                                "FROM record INNER JOIN profile ON record.id_profile = profile.id_profile\n" +
+//                                "WHERE date_record BETWEEN TO_DATE('01.' || EXTRACT(MONTH FROM ?) || '.' ||  EXTRACT(YEAR FROM ?), 'DD.MM.YYYY') AND TO_DATE('30.' || EXTRACT(MONTH FROM ?) || '.' ||  EXTRACT(YEAR FROM ?), 'DD.MM.YYYY');", Record.class);
+//        query.setParameter(1, approximate_date_record);
+//        query.setParameter(2, approximate_date_record);
+//        query.setParameter(3, approximate_date_record);
+//        query.setParameter(4, approximate_date_record);
+//        List<Record> result = query.getResultList();
+//        return result;
+//    }
         
 }

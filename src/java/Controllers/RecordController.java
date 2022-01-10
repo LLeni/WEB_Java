@@ -66,6 +66,11 @@ public class RecordController implements Serializable {
         recreateModel();
         return "List";
     }
+    
+    public String prepareListByMonth() {
+        recreateModel();
+        return "List by Month";
+    }
 
     public String prepareView() {
         current = (Record) getItems().getRowData();

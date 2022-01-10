@@ -1,7 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
     <h:head>
         <title>Facelet Title</title>
         <h:outputStylesheet name="css/jsfcrud.css"/>
@@ -9,17 +12,42 @@
     <h:body>
         <h1>Рекорды игры JoyRooms</h1>
         <br />
-        <div id="mainDiv">
-            <div class ="button">
+        <div class="mainDiv">
+            <div class ="button buttonOdd">
                 <h:link outcome="/Pages/comment/List" value="Комментарии"/>
             </div>
-            <div class ="button">
+            <div class ="button buttonEven">
                 <h:link outcome="/Pages/profile/List" value="Профили"/>
             </div>
-            <div class ="button">
+            <div class ="button buttonOdd">
                 <h:link outcome="/Pages/reaction/List" value="Реакции"/>
             </div>
-            <div class ="button">
+            <div class ="button buttonEven">
+                <h:link outcome="/Pages/record/List" value="Записи"/>
+            </div>
+        </div>
+        <div class="mainDiv">
+            <div class ="button buttonBlank">
+            </div>
+            <div class ="button buttonBlank">
+            </div>
+            <div class ="button buttonBlank">
+                                                <p color="white" aligh="right"> Получение записей в течение одного месяца</p>:
+            </div>
+            <div class ="button buttonOdd">
+
+                                <h:form>
+                <h:panelGrid columns="2">
+                    
+
+                    <h:commandButton    class="command" action="#{reactionController.prepareView}" value="#{bundle.ListReactionViewLink}"  />
+                    <h:selectOneMenu id="idProfile" value="#{recordController.selected.idProfile}" title="#{bundle.CreateRecordTitle_idProfile}" >
+                        <f:selectItems value="#{profileController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:commandLink action="#{recordController.prepareFindByMonth}" value="#{bundle.Link}" />
+                </h:panelGrid>
+                </h:form>
+                       
                 <h:link outcome="/Pages/record/List" value="Записи"/>
             </div>
         </div>
