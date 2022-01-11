@@ -28,12 +28,6 @@
                         </h:column>
                         <h:column>
                             <f:facet name="header">
-                                <h:outputText value="#{bundle.ListCommentTitle_textComment}"/>
-                            </f:facet>
-                            <h:outputText value="#{item.textComment}"/>
-                        </h:column>
-                        <h:column>
-                            <f:facet name="header">
                                 <h:outputText value="#{bundle.ListCommentTitle_idProfile}"/>
                             </f:facet>
                             <h:outputText value="#{item.idProfile}"/>
@@ -43,6 +37,12 @@
                                 <h:outputText value="#{bundle.ListCommentTitle_idRecord}"/>
                             </f:facet>
                             <h:outputText value="#{item.idRecord}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListCommentTitle_textComment}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.textComment}"/>
                         </h:column>
                         <h:column >
                             
@@ -54,6 +54,7 @@
                            <h:commandButton  class="command" action="#{commentController.prepareEdit}" value="#{bundle.ListCommentEditLink}" image="/resources/images/edit.png" />
                            <h:commandButton  class="command" action="#{commentController.destroy}" value="#{bundle.ListCommentDestroyLink}"  image="/resources/images/delete.png"/>
                         </h:column>
+
                     </h:dataTable>
                 </h:panelGroup>
                 <br />

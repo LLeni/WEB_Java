@@ -17,6 +17,10 @@
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.CreateRecordLabel_idRecord}" for="idRecord" />
                     <h:inputText id="idRecord" value="#{recordController.selected.idRecord}" title="#{bundle.CreateRecordTitle_idRecord}" required="true" requiredMessage="#{bundle.CreateRecordRequiredMessage_idRecord}"/>
+                    <h:outputLabel value="#{bundle.CreateRecordLabel_idProfile}" for="idProfile" />
+                    <h:selectOneMenu id="idProfile" value="#{recordController.selected.idProfile}" title="#{bundle.CreateRecordTitle_idProfile}" >
+                        <f:selectItems value="#{profileController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
                     <h:outputLabel value="#{bundle.CreateRecordLabel_dateRecord}" for="dateRecord" />
                     <h:inputText id="dateRecord" value="#{recordController.selected.dateRecord}" title="#{bundle.CreateRecordTitle_dateRecord}" required="true" requiredMessage="#{bundle.CreateRecordRequiredMessage_dateRecord}">
                         <f:convertDateTime pattern="MM/dd/yyyy" />
@@ -31,10 +35,8 @@
                     <h:inputText id="timeRunRecord" value="#{recordController.selected.timeRunRecord}" title="#{bundle.CreateRecordTitle_timeRunRecord}" required="true" requiredMessage="#{bundle.CreateRecordRequiredMessage_timeRunRecord}">
                         <f:convertDateTime pattern="HH:mm:ss" />
                     </h:inputText>
-                    <h:outputLabel value="#{bundle.CreateRecordLabel_idProfile}" for="idProfile" />
-                    <h:selectOneMenu id="idProfile" value="#{recordController.selected.idProfile}" title="#{bundle.CreateRecordTitle_idProfile}" >
-                        <f:selectItems value="#{profileController.itemsAvailableSelectOne}"/>
-                    </h:selectOneMenu>
+
+
                 </h:panelGrid>
                 <br />
                 <br />

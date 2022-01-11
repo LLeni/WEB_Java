@@ -26,12 +26,7 @@
                             </f:facet>
                             <h:outputText value="#{item.idReaction}"/>
                         </h:column>
-                        <h:column>
-                            <f:facet name="header">
-                                <h:outputText value="#{bundle.ListReactionTitle_isLikeReaction}"/>
-                            </f:facet>
-                            <h:outputText value="#{item.isLikeReaction}"/>
-                        </h:column>
+                        
                         <h:column>
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListReactionTitle_idProfile}"/>
@@ -43,6 +38,12 @@
                                 <h:outputText value="#{bundle.ListReactionTitle_idRecord}"/>
                             </f:facet>
                             <h:outputText value="#{item.idRecord}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListReactionTitle_isLikeReaction}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.isLikeReaction}"/>
                         </h:column>
                         <h:column>
                             <f:facet name="header">

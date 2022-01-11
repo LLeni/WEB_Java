@@ -17,6 +17,8 @@
                 <h:panelGrid columns="2">
                     <h:outputText value="#{bundle.ViewRecordLabel_idRecord}"/>
                     <h:outputText value="#{recordController.selected.idRecord}" title="#{bundle.ViewRecordTitle_idRecord}"/>
+                    <h:outputText value="#{bundle.ViewRecordLabel_idProfile}"/>
+                    <h:outputText value="#{recordController.selected.idProfile}" title="#{bundle.ViewRecordTitle_idProfile}"/>
                     <h:outputText value="#{bundle.ViewRecordLabel_dateRecord}"/>
                     <h:outputText value="#{recordController.selected.dateRecord}" title="#{bundle.ViewRecordTitle_dateRecord}">
                         <f:convertDateTime pattern="MM/dd/yyyy" />
@@ -31,8 +33,6 @@
                     <h:outputText value="#{recordController.selected.timeRunRecord}" title="#{bundle.ViewRecordTitle_timeRunRecord}">
                         <f:convertDateTime pattern="HH:mm:ss" />
                     </h:outputText>
-                    <h:outputText value="#{bundle.ViewRecordLabel_idProfile}"/>
-                    <h:outputText value="#{recordController.selected.idProfile}" title="#{bundle.ViewRecordTitle_idProfile}"/>
                 </h:panelGrid>
                 <br />
                 <br />

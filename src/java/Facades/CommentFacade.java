@@ -29,6 +29,4 @@ public class CommentFacade extends AbstractFacade<Comment> {
         super(Comment.class);
     }
     
-
-    
 }

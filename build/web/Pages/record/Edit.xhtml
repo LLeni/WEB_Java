@@ -17,6 +17,10 @@
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.EditRecordLabel_idRecord}" for="idRecord" />
                     <h:inputText id="idRecord" value="#{recordController.selected.idRecord}" title="#{bundle.EditRecordTitle_idRecord}" required="true" requiredMessage="#{bundle.EditRecordRequiredMessage_idRecord}"/>
+                    <h:outputLabel value="#{bundle.EditRecordLabel_idProfile}" for="idProfile" />
+                    <h:selectOneMenu id="idProfile" value="#{recordController.selected.idProfile}" title="#{bundle.EditRecordTitle_idProfile}" >
+                        <f:selectItems value="#{profileController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
                     <h:outputLabel value="#{bundle.EditRecordLabel_dateRecord}" for="dateRecord" />
                     <h:inputText id="dateRecord" value="#{recordController.selected.dateRecord}" title="#{bundle.EditRecordTitle_dateRecord}" required="true" requiredMessage="#{bundle.EditRecordRequiredMessage_dateRecord}">
                         <f:convertDateTime pattern="MM/dd/yyyy" />
@@ -31,10 +35,7 @@
                     <h:inputText id="timeRunRecord" value="#{recordController.selected.timeRunRecord}" title="#{bundle.EditRecordTitle_timeRunRecord}" required="true" requiredMessage="#{bundle.EditRecordRequiredMessage_timeRunRecord}">
                         <f:convertDateTime pattern="HH:mm:ss" />
                     </h:inputText>
-                    <h:outputLabel value="#{bundle.EditRecordLabel_idProfile}" for="idProfile" />
-                    <h:selectOneMenu id="idProfile" value="#{recordController.selected.idProfile}" title="#{bundle.EditRecordTitle_idProfile}" >
-                        <f:selectItems value="#{profileController.itemsAvailableSelectOne}"/>
-                    </h:selectOneMenu>
+
                 </h:panelGrid>
                 <h:commandLink class="link" action="#{recordController.update}" value="#{bundle.EditRecordSaveLink}"/>
                 <br />

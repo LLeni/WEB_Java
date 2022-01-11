@@ -30,6 +30,12 @@
                         </h:column>
                         <h:column>
                             <f:facet name="header">
+                                <h:outputText value="#{bundle.ListRecordTitle_idProfile}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.idProfile}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
                                 <h:outputText value="#{bundle.ListRecordTitle_dateRecord}"/>
                             </f:facet>
                             <h:outputText value="#{item.dateRecord}">
@@ -61,12 +67,6 @@
                             <h:outputText value="#{item.timeRunRecord}">
                                 <f:convertDateTime pattern="HH:mm:ss" />
                             </h:outputText>
-                        </h:column>
-                        <h:column>
-                            <f:facet name="header">
-                                <h:outputText value="#{bundle.ListRecordTitle_idProfile}"/>
-                            </f:facet>
-                            <h:outputText value="#{item.idProfile}"/>
                         </h:column>
                         
                          <h:column>

@@ -17,8 +17,6 @@
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.EditReactionLabel_idReaction}" for="idReaction" />
                     <h:inputText id="idReaction" value="#{reactionController.selected.idReaction}" title="#{bundle.EditReactionTitle_idReaction}" required="true" requiredMessage="#{bundle.EditReactionRequiredMessage_idReaction}"/>
-                    <h:outputLabel value="#{bundle.EditReactionLabel_isLikeReaction}" for="isLikeReaction" />
-                    <h:inputText id="isLikeReaction" value="#{reactionController.selected.isLikeReaction}" title="#{bundle.EditReactionTitle_isLikeReaction}" required="true" requiredMessage="#{bundle.EditReactionRequiredMessage_isLikeReaction}"/>
                     <h:outputLabel value="#{bundle.EditReactionLabel_idProfile}" for="idProfile" />
                     <h:selectOneMenu id="idProfile" value="#{reactionController.selected.idProfile}" title="#{bundle.EditReactionTitle_idProfile}" >
                         <f:selectItems value="#{profileController.itemsAvailableSelectOne}"/>
@@ -27,6 +25,8 @@
                     <h:selectOneMenu id="idRecord" value="#{reactionController.selected.idRecord}" title="#{bundle.EditReactionTitle_idRecord}" >
                         <f:selectItems value="#{recordController.itemsAvailableSelectOne}"/>
                     </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.EditReactionLabel_isLikeReaction}" for="isLikeReaction" />
+                    <h:inputText id="isLikeReaction" value="#{reactionController.selected.isLikeReaction}" title="#{bundle.EditReactionTitle_isLikeReaction}" required="true" requiredMessage="#{bundle.EditReactionRequiredMessage_isLikeReaction}"/>
                 </h:panelGrid>
                 <h:commandLink class="link" action="#{reactionController.update}" value="#{bundle.EditReactionSaveLink}"/>
                 <br />

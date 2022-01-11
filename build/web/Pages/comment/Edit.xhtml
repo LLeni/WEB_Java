@@ -17,8 +17,6 @@
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.EditCommentLabel_idComment}" for="idComment" />
                     <h:inputText id="idComment" value="#{commentController.selected.idComment}" title="#{bundle.EditCommentTitle_idComment}" required="true" requiredMessage="#{bundle.EditCommentRequiredMessage_idComment}"/>
-                    <h:outputLabel value="#{bundle.EditCommentLabel_textComment}" for="textComment" />
-                    <h:inputText id="textComment" value="#{commentController.selected.textComment}" title="#{bundle.EditCommentTitle_textComment}" required="true" requiredMessage="#{bundle.EditCommentRequiredMessage_textComment}"/>
                     <h:outputLabel value="#{bundle.EditCommentLabel_idProfile}" for="idProfile" />
                     <h:selectOneMenu id="idProfile" value="#{commentController.selected.idProfile}" title="#{bundle.EditCommentTitle_idProfile}" >
                         <f:selectItems value="#{profileController.itemsAvailableSelectOne}"/>
@@ -27,6 +25,8 @@
                     <h:selectOneMenu id="idRecord" value="#{commentController.selected.idRecord}" title="#{bundle.EditCommentTitle_idRecord}" >
                         <f:selectItems value="#{recordController.itemsAvailableSelectOne}"/>
                     </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.EditCommentLabel_textComment}" for="textComment" />
+                    <h:inputText id="textComment" value="#{commentController.selected.textComment}" title="#{bundle.EditCommentTitle_textComment}" required="true" requiredMessage="#{bundle.EditCommentRequiredMessage_textComment}"/>
                 </h:panelGrid>
                 <h:commandLink class="link" action="#{commentController.update}" value="#{bundle.EditCommentSaveLink}"/>
                 <br />
